@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom Shibu - Full Stack Developer</title>
+    <link rel="stylesheet" href="sample.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menuToggle = document.getElementById("menuToggle");
+    const sidebar = document.querySelector(".sidebar");
+
+    menuToggle.addEventListener("click", function () {
+        sidebar.classList.toggle("active");
+    });
+
+});
+</script>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <!-- <div class="logo">TS</div> -->
+        <nav class="nav-menu">
+            <a href="#home" class="nav-item active">
+                <span class="nav-icon">🏠</span>
+                <span>Home</span>
+            </a>
+            <a href="#about" class="nav-item">
+                <span class="nav-icon">👤</span>
+                <span>About</span>
+            </a>
+            <a href="#skills" class="nav-item">
+                <span class="nav-icon">💻</span>
+                <span>Skills</span>
+            </a>
+            <a href="#projects" class="nav-item">
+                <span class="nav-icon">📁</span>
+                <span>Projects</span>
+            </a>
+            <a href="#resume" class="nav-item">
+                <span class="nav-icon">📄</span>
+                <span>Resume</span>
+            </a>
+            <a href="#contact" class="nav-item">
+                <span class="nav-icon">✉️</span>
+                <span>Contact</span>
+            </a>
+        </nav>
+        <div class="social-links">
+            <a href="www.linkedin.com/in/tomshibu" class="social-icon" title="LinkedIn">in</a>
+            <a href="https://github.com/tomshibu13" class="social-icon" title="GitHub">⚙️</a>
+            <a href="https://www.instagram.com/tom_shibu1829/" class="social-icon" title="Instagram">📷</a>
+            <!-- <a href="" class="social-icon" title="Email">✉️</a> -->
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+<button class="menu-toggle" id="menuToggle">☰</button>
+    <main class="main-content">
+        <!-- Top Navigation -->
+        <div class="top-nav">
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#resume">Resume</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="theme-toggle dark">
+                <div class="toggle-circle"></div>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-left">
+                <div class="id-card-container">
+                    <!-- <div class="id-card-lanyard"></div> -->
+                   <div class="id-wrapper">
+
+    <!-- Top Circle -->
+    <div class="badge-top">
+    <div class="ring"></div>
+</div>
+
+<div class="hook"></div>
+
+<div class="string"></div>
+
+<div class="id-card">
+
+        <h1>ID Card</h1>
+        <!-- <h2>Developer</h2> -->
+
+        <div class="info">
+            <p>Tom Shibu</p>
+            <span>Full Stack Developer</span>
+
+            
+        </div>
+
+        <!-- QR -->
+        <div class="qr">
+            <img src="qr.png" alt="GitHub QR">
+        </div>
+
+        <!-- Profile Image -->
+        <img src="profile.png" alt="Tom Shibu" class="profile-image">
+
+    </div>
+
+</div>
+
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="greeting">
+                    <span>👋</span>
+                    <span>Hello, I'm</span>
+                </div>
+                <h3 class="hero-title">Tom <span>Shibu</span></h3>
+                <p class="hero-description">I build clean, modern & user-friendly <span>web applications.</span></p>
+                <p class="hero-description">I'm an MCA student passionate about full stack development and creating real world solutions through code.</p>
+                <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                        <span>🚀</span>
+                        
+                        <span >Explore My Work</span>
+               </a>
+                    </button>
+                   
+                        <a href="Tom_Shibu_Resume.pdf" download class="btn btn-secondary">
+                        <span>⬇️</span>
+                        <span>Download Resume</span>
+                        </a>
+                    
+                </div>
+
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Years of Learning</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="quote-section">
+
+    <div class="quote-content">
+
+        <div class="quote-left">
+            <span class="quote-icon">❝</span>
+
+            <h3>
+                Code is not just what I write,<br>
+                it's how I solve <span>problems.</span>
+            </h3>
+        </div>
+
+        
+
+    </div>
+
+</section>
+
+        <!-- Tech Stack Section -->
+        <section class="skills-section" id="skills">
+
+    <div class="skills-header">
+        <div>
+            <p class="section-label">TECH STACK</p>
+            <h3>Technologies I <span>Work With</span></h3>
+        </div>
+
+        <a href="#" class="view-skills-btn">
+            View All Skills →
+        </a>
+    </div>
+
+    <div class="skills-grid">
+
+        <div class="skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+            <h3>HTML</h3>
+            <div class="skill-bar"><span></span></div>
+        </div>
+
+        <div class="skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+            <h3>CSS</h3>
+            <div class="skill-bar"><span></span></div>
+        </div>
+
+        <div class="skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+            <h3>JavaScript</h3>
+            <div class="skill-bar"><span></span></div>
+        </div>
+
+        <div class="skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+            <h3>React</h3>
+            <div class="skill-bar"><span></span></div>
+        </div>
+
+        <div class="skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
+            <h3>Node.js</h3>
+            <div class="skill-bar"><span></span></div>
+        </div>
+
+        <div class="skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg">
+            <h3>Express.js</h3>
+            <div class="skill-bar"><span></span></div>
+        </div>
+
+        <div class="skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg">
+            <h3>MongoDB</h3>
+            <div class="skill-bar"><span></span></div>
+        </div>
+
+        <div class="skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg">
+            <h3>PHP</h3>
+            <div class="skill-bar"><span></span></div>
+        </div>
+
+        <div class="skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+            <h3>Git & GitHub</h3>
+            <div class="skill-bar"><span></span></div>
+        </div>
+
+    </div>
+
+</section>
+        <!-- Projects Section -->
+        <section class="projects-section" id="projects">
+            <div class="section-title">Portfolio</div>
+            <div class="section-heading">
+                <span>Some Things I've <span>Built</span></span>
+                <a href="#" class="view-all-link">View All Projects →</a>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">📚</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Book Haven</h3>
+                        <p class="project-description">Online bookstore website with cart, user authentication and admin panel.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Wordpress</span>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">⚡</div>
+                    <div class="project-content">
+                        <h3 class="project-title">EV Charging Finder</h3>
+                        <p class="project-description">Find nearby EV charging stations, real-time availability and booking system.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JS</span>
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🎯</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Quiz Application</h3>
+                        <p class="project-description">Interactive quiz platform with multiple categories and score tracking.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JS</span>
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+    <div class="contact-container">
+
+        <div class="contact-logo">
+           <div class="logo-circle">
+    <i class="fa-solid fa-paper-plane"></i>
+</div>
+        </div>
+
+        <div class="contact-left">
+            <h3>Let's build something <span>amazing</span> together!</h3>
+
+            <div class="contact-info">
+
+                <div class="contact-item">
+                    <div class="contact-icon">✉</div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <p>tomshibu49@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <h4>Location</h4>
+                        <p>India</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="contact-right">
+            <button class="get-in-touch-btn">
+                Get In Touch
+                <span>→</span>
+            </button>
+        </div>
+
+    </div>
+</section>
+    </main>
+
+    <script src="sample.js"></script>
+        
+    </script>
+</body>
+</html>
