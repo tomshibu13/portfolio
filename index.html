@@ -1,356 +1,620 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tom Shibu - Full Stack Developer</title>
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
 
-    const menuToggle = document.getElementById("menuToggle");
-    const sidebar = document.querySelector(".sidebar");
-
-    menuToggle.addEventListener("click", function () {
-        sidebar.classList.toggle("active");
-    });
-
-});
-</script>
 <body>
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-        <!-- <div class="logo">TS</div> -->
-        <nav class="nav-menu">
-            <a href="#home" class="nav-item active">
-                <span class="nav-icon">🏠</span>
-                <span>Home</span>
-            </a>
-            <a href="#about" class="nav-item">
-                <span class="nav-icon">👤</span>
-                <span>About</span>
-            </a>
-            <a href="#skills" class="nav-item">
-                <span class="nav-icon">💻</span>
-                <span>Skills</span>
-            </a>
-            <a href="#projects" class="nav-item">
-                <span class="nav-icon">📁</span>
-                <span>Projects</span>
-            </a>
-            <a href="#resume" class="nav-item">
-                <span class="nav-icon">📄</span>
-                <span>Resume</span>
-            </a>
-            <a href="#contact" class="nav-item">
-                <span class="nav-icon">✉️</span>
-                <span>Contact</span>
-            </a>
-        </nav>
-        <div class="social-links">
-            <a href="https://linkedin.com/in/tomshibu" class="social-icon" title="LinkedIn">in</a>
-            <a href="https://github.com/tomshibu13" class="social-icon" title="GitHub">⚙️</a>
-            <a href="https://www.instagram.com/tom_shibu1829/" class="social-icon" title="Instagram">📷</a>
-            <!-- <a href="" class="social-icon" title="Email">✉️</a> -->
-        </div>
-    </aside>
+    <!-- Advanced Dynamic Background Overlays -->
+    <div class="cursor-glow-spotlight"></div>
+    <div class="ambient-grain"></div>
 
-    <!-- Main Content -->
-<button class="menu-toggle" id="menuToggle">☰</button>
-    <main class="main-content">
-        <!-- Top Navigation -->
-        <div class="top-nav">
-            <div class="nav-links">
+    <!-- Floating Top Header Navigation -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="#home" class="header-logo">TOM SHIBU<span>.</span></a>
+            <nav class="nav-links">
                 <a href="#home" class="active">Home</a>
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#resume">Resume</a>
                 <a href="#contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <div class="theme-toggle dark" id="themeToggleBtn">
+                    <div class="toggle-circle"></div>
+                </div>
+                <button class="menu-toggle" id="menuToggle">☰</button>
             </div>
-            <div class="theme-toggle dark">
-                <div class="toggle-circle"></div>
-            </div>
         </div>
+    </header>
 
-        <!-- Hero Section -->
-        <section class="hero" id="home">
-            <div class="hero-left">
-                <div class="id-card-container">
-                    <!-- <div class="id-card-lanyard"></div> -->
-                   <div class="id-wrapper">
-
-    <!-- Top Circle -->
-    <div class="badge-top">
-    <div class="ring"></div>
-</div>
-
-<div class="hook"></div>
-
-<div class="string"></div>
-
-<div class="id-card">
-
-        <h1>ID Card</h1>
-        <!-- <h2>Developer</h2> -->
-
-        <div class="info">
-            <p>Tom Shibu</p>
-            <span>Full Stack Developer</span>
-
-            
-        </div>
-
-        <!-- QR -->
-        <div class="qr">
-            <img src="qr.png" alt="GitHub QR">
-        </div>
-
-        <!-- Profile Image -->
-        <img src="profile.png" alt="Tom Shibu" class="profile-image">
-
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </div>
 
-</div>
+    <!-- Main Viewport Container -->
+    <main class="main-content">
 
+        <!-- ==================== HOME SECTION ==================== -->
+        <section class="page-section active" id="home">
+            <div class="hero-split">
+                <div class="hero-left">
+                    <!-- Studio Showcase Deck -->
+                    <div class="showcase-deck">
+                        <div class="deck-header">
+                            <span class="deck-dot"></span>
+                            <div class="deck-title">INDEX // TS_01</div>
+                            <div class="deck-tabs">
+                                <button class="deck-tab active" data-tab="profile">01 / Profile</button>
+                                <button class="deck-tab" data-tab="tech">02 / Tech</button>
+                                <button class="deck-tab" data-tab="coords">03 / Details</button>
+                            </div>
+                        </div>
+                        <div class="deck-body">
+                            <!-- Tab: Profile -->
+                            <div id="deck-profile" class="deck-content active-content">
+                                <p class="deck-meta-tag">// CREATIVE LOGIC</p>
+                                <h4>Developing digital systems combining clean logic with spatial layouts.</h4>
+                                <p class="deck-paragraph">Integrated MCA student with hands-on experience in the MERN
+                                    stack, PHP, JavaScript, and database systems. Passionate about building responsive,
+                                    user-friendly layouts.</p>
+                            </div>
+
+                            <!-- Tab: Tech -->
+                            <div id="deck-tech" class="deck-content">
+                                <p class="deck-meta-tag">// ARCHITECTURE BASE</p>
+                                <div class="deck-tech-grid">
+                                    <div class="tech-row">
+                                        <span class="tech-row-lbl">Client</span>
+                                        <span class="tech-row-val">React.js, Bootstrap, Tailwind CSS, Responsive
+                                            Design</span>
+                                    </div>
+                                    <div class="tech-row">
+                                        <span class="tech-row-lbl">Server</span>
+                                        <span class="tech-row-val">Node.js, Express.js, PHP, REST APIs</span>
+                                    </div>
+                                    <div class="tech-row">
+                                        <span class="tech-row-lbl">Database</span>
+                                        <span class="tech-row-val">MongoDB pipelines, MySQL systems</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tab: Coordinates -->
+                            <div id="deck-coords" class="deck-content">
+                                <p class="deck-meta-tag">// COORDINATES</p>
+                                <div class="deck-coords-grid">
+                                    <div class="coord-item">
+                                        <span class="coord-lbl">Status</span>
+                                        <span class="coord-val text-glow-amber">Open to opportunities</span>
+                                    </div>
+                                    <div class="coord-item">
+                                        <span class="coord-lbl">Studies</span>
+                                        <span class="coord-val">Integrated MCA (2022 - 2027)</span>
+                                    </div>
+                                    <div class="coord-item">
+                                        <span class="coord-lbl">Location</span>
+                                        <span class="coord-val">Kerala, India</span>
+                                    </div>
+                                    <div class="coord-item">
+                                        <span class="coord-lbl">Phone</span>
+                                        <span class="coord-val">+91 9072784982</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="hero-editorial">
+                        <span class="editorial-label">INTRODUCING TOM SHIBU</span>
+                        <h1 class="editorial-title">CRAFTING<br>DURABLE<br><span>SYSTEMS.</span></h1>
+                        <p class="editorial-tagline">Integrated MCA Student — Full Stack & MERN Developer. Designing
+                            clean, accessible, and database-driven solutions for the web.</p>
+
+                        <div class="editorial-buttons">
+                            <a href="#projects" class="btn btn-editorial">
+                                <span>VIEW SELECTED WORKS</span>
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                            <a href="Tom_Shibu_Resume.pdf" download class="btn btn-editorial-secondary">
+                                <span>DOWNLOAD RESUME PDF</span>
+                            </a>
+                        </div>
+
+                        <div class="editorial-stats">
+                            <div class="stat-block">
+                                <div class="stat-val">3+</div>
+                                <div class="stat-lbl">Academic Projects</div>
+                            </div>
+                            <div class="stat-block">
+                                <div class="stat-val">2027</div>
+                                <div class="stat-lbl">MCA Graduate</div>
+                            </div>
+                            <div class="stat-block">
+                                <div class="stat-val">15+</div>
+                                <div class="stat-lbl">Skills & Tools</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="hero-right">
-                <div class="greeting">
-                    <span>👋</span>
-                    <span>Hello, I'm</span>
+            <!-- Warm Editorial Quote Section -->
+            <div class="hero-quote-wrapper">
+                <div class="editorial-divider"></div>
+                <div class="editorial-quote-row">
+                    <div class="quote-sign">“</div>
+                    <div class="quote-block-text">
+                        <h3>Code is not just what I write, it's how I solve problems. Every interface is a blueprint
+                            waiting for clean implementation.</h3>
+                    </div>
                 </div>
-                <h3 class="hero-title">Tom <span>Shibu</span></h3>
-                <p class="hero-description">I build clean, modern & user-friendly <span>web applications.</span></p>
-                <p class="hero-description">I'm an MCA student passionate about full stack development and creating real world solutions through code.</p>
-                <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">
-                        <span>🚀</span>
-                        
-                        <span >Explore My Work</span>
-               </a>
-                    </button>
-                   
-                        <a href="Tom_Shibu_Resume.pdf" download class="btn btn-secondary">
-                        <span>⬇️</span>
-                        <span>Download Resume</span>
+            </div>
+        </section>
+
+        <!-- ==================== ABOUT SECTION ==================== -->
+        <section class="page-section" id="about">
+            <div class="section-heading-editorial">
+                <span class="sec-editorial-num">[02]</span>
+                <h2>BIOGRAPHY &<br><span>BACKGROUND</span></h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-left-portrait">
+                    <div class="editorial-frame">
+                        <img src="profile.png" alt="Tom Shibu Portrait" class="editorial-portrait">
+                        <div class="portrait-tint"></div>
+                        <div class="portrait-caption">FIG 1.2 // TOM SHIBU PORTRAIT</div>
+                    </div>
+                </div>
+
+                <div class="about-right-text">
+                    <p class="intro-lead">I am a programmer pursuing my Integrated Master of Computer Applications (MCA)
+                        degree at Amal Jyothi College of Engineering, Kerala.</p>
+
+                    <p class="bio-para">My development philosophy is structured around writing simple, clean, and
+                        self-documenting code. I enjoy building responsive, user-friendly applications and solving
+                        real-world problems through technology. I have hands-on experience working with the MERN stack,
+                        PHP, REST APIs, and database management systems.</p>
+
+                    <p class="bio-para">Having completed a hybrid internship as a MERN Stack Developer at Amigosia Pvt.
+                        Ltd., I focus heavily on writing secure code, structuring robust databases, and optimizing web
+                        servers. My goal is to build applications that are stable, responsive, and easy to maintain.</p>
+
+                    <div class="about-specs-grid">
+                        <div class="spec-block">
+                            <h5>MERN FOCUS</h5>
+                            <p>Developing scalable endpoints in Express, structuring MongoDB schemas, and binding
+                                interactive states in React.</p>
+                        </div>
+                        <div class="spec-block">
+                            <h5>DATABASE & SECURITY</h5>
+                            <p>Configuring secure query relations in MySQL/MongoDB, and implementing secure JWT
+                                authorizations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SKILLS SECTION ==================== -->
+        <section class="page-section" id="skills">
+            <div class="skills-editorial-header">
+                <div class="section-heading-editorial">
+                    <span class="sec-editorial-num">[03]</span>
+                    <h2>CURATED<br><span>TECH INDEX</span></h2>
+                </div>
+                <div class="editorial-filter-bar">
+                    <button class="filter-btn active" data-filter="all">ALL</button>
+                    <button class="filter-btn" data-filter="frontend">CLIENT/FRONT</button>
+                    <button class="filter-btn" data-filter="backend">SERVER/BACK</button>
+                    <button class="filter-btn" data-filter="tools">WORKFLOW</button>
+                </div>
+            </div>
+
+            <div class="tech-index-grid">
+                <!-- React -->
+                <div class="tech-index-card" data-category="frontend">
+                    <div class="tech-card-title-row">
+                        <span class="tech-num">01/</span>
+                        <h4>React.js</h4>
+                    </div>
+                    <p class="tech-desc-text">Developing scalable single page interfaces using reusable state hooks,
+                        functional component hierarchies, and modular event bindings.</p>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-index-card" data-category="frontend">
+                    <div class="tech-card-title-row">
+                        <span class="tech-num">02/</span>
+                        <h4>JavaScript (ES6+)</h4>
+                    </div>
+                    <p class="tech-desc-text">Writing custom interactive logic, handling async promises, manipulating
+                        the DOM, and parsing secure REST API integrations.</p>
+                </div>
+
+                <!-- Node & Express -->
+                <div class="tech-index-card" data-category="backend">
+                    <div class="tech-card-title-row">
+                        <span class="tech-num">03/</span>
+                        <h4>Node & Express.js</h4>
+                    </div>
+                    <p class="tech-desc-text">Configuring server environments, routing HTTP endpoints, structuring
+                        backend gateways, and handling request middleware buffers.</p>
+                </div>
+
+                <!-- MongoDB & MySQL -->
+                <div class="tech-index-card" data-category="backend">
+                    <div class="tech-card-title-row">
+                        <span class="tech-num">04/</span>
+                        <h4>MongoDB & MySQL</h4>
+                    </div>
+                    <p class="tech-desc-text">Designing relational databases and document collections, optimizing
+                        indexes, aggregating schemas, and maintaining transaction safety.</p>
+                </div>
+
+                <!-- PHP -->
+                <div class="tech-index-card" data-category="backend">
+                    <div class="tech-card-title-row">
+                        <span class="tech-num">05/</span>
+                        <h4>PHP Core</h4>
+                    </div>
+                    <p class="tech-desc-text">Writing object-oriented server scripts, handling security headers,
+                        managing cookie sessions, and outputting dynamic parameters.</p>
+                </div>
+
+                <!-- Bootstrap & Tailwind -->
+                <div class="tech-index-card" data-category="frontend">
+                    <div class="tech-card-title-row">
+                        <span class="tech-num">06/</span>
+                        <h4>Bootstrap & Tailwind</h4>
+                    </div>
+                    <p class="tech-desc-text">Structuring clean web interfaces using utility classes, fluid grid
+                        systems, responsive query breakpoints, and customized variables.</p>
+                </div>
+
+                <!-- Programming Languages -->
+                <div class="tech-index-card" data-category="backend">
+                    <div class="tech-card-title-row">
+                        <span class="tech-num">07/</span>
+                        <h4>Java, C, C++, Python</h4>
+                    </div>
+                    <p class="tech-desc-text">Acquiring strong programming concepts, memory pointers, loop logic,
+                        algorithms, and compiling basics for custom operations.</p>
+                </div>
+
+                <!-- Workflow Tools -->
+                <div class="tech-index-card" data-category="tools">
+                    <div class="tech-card-title-row">
+                        <span class="tech-num">08/</span>
+                        <h4>Postman, Compass & XAMPP</h4>
+                    </div>
+                    <p class="tech-desc-text">Testing API routes, visualizing MongoDB query logs, hosting local servers,
+                        and checking request header responses.</p>
+                </div>
+
+                <!-- Git -->
+                <div class="tech-index-card" data-category="tools">
+                    <div class="tech-card-title-row">
+                        <span class="tech-num">09/</span>
+                        <h4>Git & GitHub</h4>
+                    </div>
+                    <p class="tech-desc-text">Versioning codebases, running terminal branching strategies, coordinating
+                        commits, resolving conflicts, and managing code reviews.</p>
+                </div>
+
+                <!-- Core Security Concepts -->
+                <div class="tech-index-card" data-category="tools">
+                    <div class="tech-card-title-row">
+                        <span class="tech-num">10/</span>
+                        <h4>JWT, CRUD & MVC</h4>
+                    </div>
+                    <p class="tech-desc-text">Implementing secure role-based JSON Web Tokens, configuring database CRUD
+                        queries, and designing modular MVC models.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PROJECTS SECTION ==================== -->
+        <section class="page-section" id="projects">
+            <div class="projects-editorial-header">
+                <div class="section-heading-editorial">
+                    <span class="sec-editorial-num">[04]</span>
+                    <h2>SELECTED<br><span>BUILDS</span></h2>
+                </div>
+                <div class="editorial-filter-bar">
+                    <button class="filter-btn active" data-filter="all">ALL</button>
+                    <button class="filter-btn" data-filter="mern">MERN STACK</button>
+                    <button class="filter-btn" data-filter="php">PHP & MYSQL</button>
+                </div>
+            </div>
+
+            <div class="editorial-projects-grid">
+                <!-- Student Management System -->
+                <div class="editorial-project-card" data-tech="mern">
+                    <div class="card-outline-box">
+                        <span class="proj-num">01 // Full-Stack MERN</span>
+                        <h3>Student Management System</h3>
+                        <p class="proj-desc">A complete student database platform with secure authentication, full CRUD
+                            capabilities for student records, dashboards, search filters, and pagination.</p>
+                        <div class="proj-tags">
+                            <span>React.js</span>
+                            <span>Node.js</span>
+                            <span>Express.js</span>
+                            <span>MongoDB</span>
+                            <span>JWT Auth</span>
+                        </div>
+                        <div class="proj-expand-prompt">CLICK TO EXPLORE ARCHITECTURE BLUEPRINT <i
+                                class="fa-solid fa-chevron-down"></i></div>
+                    </div>
+                    <!-- Inline Project Detail Panel (Expanded on Click) -->
+                    <div class="project-detail-panel">
+                        <div class="detail-panel-inner">
+                            <div class="detail-divider"></div>
+                            <div class="detail-body">
+                                <div class="detail-col">
+                                    <h5>THE CHALLENGE</h5>
+                                    <p>Managing high-concurrency database queries for student records and securing
+                                        administrative endpoints against unauthorized actions.</p>
+                                </div>
+                                <div class="detail-col">
+                                    <h5>THE RESOLUTION</h5>
+                                    <p>Configured MongoDB schemas with indexing, restricted server operations to JWT
+                                        verified admins, and built custom React hooks for search and pagination
+                                        controls.</p>
+                                </div>
+                            </div>
+                            <div class="detail-footer">
+                                <span class="blueprint-label">BLUEPRINT REF: SMS_01</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EV Charging Finder -->
+                <div class="editorial-project-card" data-tech="php">
+                    <div class="card-outline-box">
+                        <span class="proj-num">02 // EVolve Capstone</span>
+                        <h3>EVolve Station Finder</h3>
+                        <p class="proj-desc">A web portal built to locate local electric vehicle charging hubs.
+                            Integrates Google Maps API, reservation scheduling calendars, and status panels.</p>
+                        <div class="proj-tags">
+                            <span>HTML5</span>
+                            <span>CSS3 Layouts</span>
+                            <span>Vanilla JS</span>
+                            <span>PHP Code</span>
+                            <span>MySQL</span>
+                            <span>Google Maps API</span>
+                        </div>
+                        <div class="proj-expand-prompt">CLICK TO EXPLORE ARCHITECTURE BLUEPRINT <i
+                                class="fa-solid fa-chevron-down"></i></div>
+                    </div>
+                    <!-- Inline Project Detail Panel (Expanded on Click) -->
+                    <div class="project-detail-panel">
+                        <div class="detail-panel-inner">
+                            <div class="detail-divider"></div>
+                            <div class="detail-body">
+                                <div class="detail-col">
+                                    <h5>THE CHALLENGE</h5>
+                                    <p>Locating stations and tracking real-time booking slots in high-concurrency
+                                        environments without transaction collisions.</p>
+                                </div>
+                                <div class="detail-col">
+                                    <h5>THE RESOLUTION</h5>
+                                    <p>Created isolated relational tables in MySQL using indexing, optimized
+                                        transactional queries in PHP, and built localized client mapping endpoints using
+                                        vanilla JavaScript fetch APIs.</p>
+                                </div>
+                            </div>
+                            <div class="detail-footer">
+                                <span class="blueprint-label">BLUEPRINT REF: EV_02</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quiz Application -->
+                <div class="editorial-project-card" data-tech="php">
+                    <div class="card-outline-box">
+                        <span class="proj-num">03 // Interactive Web</span>
+                        <h3>Online Quiz Application</h3>
+                        <p class="proj-desc">An interactive quiz web application featuring customized category forms,
+                            session timer counters, dynamic score outputs, and responsive views.</p>
+                        <div class="proj-tags">
+                            <span>HTML5</span>
+                            <span>CSS Grid</span>
+                            <span>JavaScript</span>
+                            <span>PHP sessions</span>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="proj-expand-prompt">CLICK TO EXPLORE ARCHITECTURE BLUEPRINT <i
+                                class="fa-solid fa-chevron-down"></i></div>
+                    </div>
+                    <!-- Inline Project Detail Panel (Expanded on Click) -->
+                    <div class="project-detail-panel">
+                        <div class="detail-panel-inner">
+                            <div class="detail-divider"></div>
+                            <div class="detail-body">
+                                <div class="detail-col">
+                                    <h5>THE CHALLENGE</h5>
+                                    <p>Maintaining secure test state logs and calculating scores accurately while
+                                        defending against client-side request tampering.</p>
+                                </div>
+                                <div class="detail-col">
+                                    <h5>THE RESOLUTION</h5>
+                                    <p>Engineered dynamic PHP session models that hold randomized question indexes on
+                                        the server, validation checks for post requests, and responsive timers synced to
+                                        DB timestamps.</p>
+                                </div>
+                            </div>
+                            <div class="detail-footer">
+                                <span class="blueprint-label">BLUEPRINT REF: QA_03</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== RESUME SECTION ==================== -->
+        <section class="page-section" id="resume">
+            <div class="section-heading-editorial">
+                <span class="sec-editorial-num">[05]</span>
+                <h2>EXPERIENCE &<br><span>QUALIFICATIONS</span></h2>
+            </div>
+
+            <div class="editorial-resume-grid">
+                <div class="resume-col">
+                    <h3 class="resume-col-title">// Professional Experience</h3>
+                    <div class="editorial-timeline">
+                        <div class="timeline-block">
+                            <span class="timeline-year">Jun 2026</span>
+                            <h4>MERN Stack Development Intern</h4>
+                            <p class="timeline-location">Amigosia Pvt. Ltd. (Hybrid)</p>
+                            <p class="timeline-desc">Coded full-stack web applications using the MERN stack. Designed
+                                MongoDB schemas, developed RESTful API endpoints with Express, and set up JWT role
+                                authorizations and CRUD actions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-col">
+                    <h3 class="resume-col-title">// Education History</h3>
+                    <div class="editorial-timeline">
+                        <div class="timeline-block">
+                            <span class="timeline-year">2022 - 2027</span>
+                            <h4>Integrated Master of Computer Applications (MCA)</h4>
+                            <p class="timeline-location">Amal Jyothi College of Engineering</p>
+                        </div>
+                        <div class="timeline-block">
+                            <span class="timeline-year">2022</span>
+                            <h4>Higher Secondary Education (12th)</h4>
+                            <p class="timeline-location">Sacred Heart HSS Thiruvambady</p>
+                        </div>
+                        <div class="timeline-block">
+                            <span class="timeline-year">2020</span>
+                            <h4>High School Education (10th)</h4>
+                            <p class="timeline-location">Sacred Heart HSS Thiruvambady</p>    
+                        </div>
+                    </div>
+
+                    <div class="resume-cv-banner">
+                        <div class="cv-banner-details">
+                            <h4>Need my resume document?</h4>
+                            <p>Download a clean PDF copy outlining all details, coursework, and qualifications.</p>
+                        </div>
+                        <a href="Tom_Shibu_Resume.pdf" download class="btn btn-editorial">
+                            <span>DOWNLOAD PDF FILE</span>
+                            <i class="fa-solid fa-file-pdf"></i>
                         </a>
-                    
-                </div>
-
-                <div class="stats">
-                    <div class="stat-card">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Projects</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Years of Learning</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Technologies</div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-
-        <!-- Quote Section -->
-        <section class="quote-section">
-
-    <div class="quote-content">
-
-        <div class="quote-left">
-            <span class="quote-icon">❝</span>
-
-            <h3>
-                Code is not just what I write,<br>
-                it's how I solve <span>problems.</span>
-            </h3>
-        </div>
-
-        
-
-    </div>
-
-</section>
-
-        <!-- Tech Stack Section -->
-        <section class="skills-section" id="skills">
-
-    <div class="skills-header">
-        <div>
-            <p class="section-label">TECH STACK</p>
-            <h3>Technologies I <span>Work With</span></h3>
-        </div>
-
-        <a href="#" class="view-skills-btn">
-            View All Skills →
-        </a>
-    </div>
-
-    <div class="skills-grid">
-
-        <div class="skill-card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
-            <h3>HTML</h3>
-            <div class="skill-bar"><span></span></div>
-        </div>
-
-        <div class="skill-card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
-            <h3>CSS</h3>
-            <div class="skill-bar"><span></span></div>
-        </div>
-
-        <div class="skill-card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
-            <h3>JavaScript</h3>
-            <div class="skill-bar"><span></span></div>
-        </div>
-
-        <div class="skill-card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
-            <h3>React</h3>
-            <div class="skill-bar"><span></span></div>
-        </div>
-
-        <div class="skill-card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
-            <h3>Node.js</h3>
-            <div class="skill-bar"><span></span></div>
-        </div>
-
-        <div class="skill-card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg">
-            <h3>Express.js</h3>
-            <div class="skill-bar"><span></span></div>
-        </div>
-
-        <div class="skill-card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg">
-            <h3>MongoDB</h3>
-            <div class="skill-bar"><span></span></div>
-        </div>
-
-        <div class="skill-card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg">
-            <h3>PHP</h3>
-            <div class="skill-bar"><span></span></div>
-        </div>
-
-        <div class="skill-card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
-            <h3>Git & GitHub</h3>
-            <div class="skill-bar"><span></span></div>
-        </div>
-
-    </div>
-
-</section>
-        <!-- Projects Section -->
-        <section class="projects-section" id="projects">
-            <div class="section-title">Portfolio</div>
-            <div class="section-heading">
-                <span>Some Things I've <span>Built</span></span>
-                <a href="#" class="view-all-link">View All Projects →</a>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">📚</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Book Haven</h3>
-                        <p class="project-description">Online bookstore website with cart, user authentication and admin panel.</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">Wordpress</span>
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">⚡</div>
-                    <div class="project-content">
-                        <h3 class="project-title">EV Charging Finder</h3>
-                        <p class="project-description">Find nearby EV charging stations, real-time availability and booking system.</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">CSS</span>
-                            <span class="tech-badge">JS</span>
-                            <span class="tech-badge">PHP</span>
-                            <span class="tech-badge">MySQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">🎯</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Quiz Application</h3>
-                        <p class="project-description">Interactive quiz platform with multiple categories and score tracking.</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">CSS</span>
-                            <span class="tech-badge">JS</span>
-                            <span class="tech-badge">PHP</span>
-                            <span class="tech-badge">MySQL</span>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="contact-section" id="contact">
-    <div class="contact-container">
-
-        <div class="contact-logo">
-           <div class="logo-circle">
-    <i class="fa-solid fa-paper-plane"></i>
-</div>
-        </div>
-
-        <div class="contact-left">
-            <h3>Let's build something <span>amazing</span> together!</h3>
-
-            <div class="contact-info">
-
-                <div class="contact-item">
-                    <div class="contact-icon">✉</div>
-                    <div class="contact-details">
-                        <h4>Email</h4>
-                        <p>tomshibu49@gmail.com</p>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <div class="contact-details">
-                        <h4>Location</h4>
-                        <p>India</p>
-                    </div>
-                </div>
-
+        <!-- ==================== CONTACT SECTION ==================== -->
+        <section class="page-section" id="contact">
+            <div class="section-heading-editorial">
+                <span class="sec-editorial-num">[06]</span>
+                <h2>CONNECT &<br><span>COORDINATES</span></h2>
             </div>
-        </div>
 
-        <div class="contact-right">
-            <button class="get-in-touch-btn">
-                Get In Touch
-                <span>→</span>
-            </button>
-        </div>
+            <div class="contact-editorial-grid">
+                <div class="contact-editorial-left">
+                    <h3>If you are interested in collaborating, hiring, or talking tech, send a query.</h3>
 
-    </div>
-</section>
+                    <div class="coord-links-list">
+                        <div class="coord-link-item">
+                            <span class="coord-label">Email Address:</span>
+                            <span class="coord-data"><a
+                                    href="mailto:tomshibu49@gmail.com">tomshibu49@gmail.com</a></span>
+                        </div>
+                        <div class="coord-link-item">
+                            <span class="coord-label">Phone Coordinates:</span>
+                            <span class="coord-data"><a href="tel:+919072784982">+91 9072784982</a></span>
+                        </div>
+                        <div class="coord-link-item">
+                            <span class="coord-label">Current Base:</span>
+                            <span class="coord-data">Kerala, India</span>
+                        </div>
+                        <div class="coord-link-item">
+                            <span class="coord-label">Socials:</span>
+                            <span class="coord-data social-inline-links">
+                                <a href="https://linkedin.com/in/tomshibu" target="_blank">LinkedIn</a> /
+                                <a href="https://github.com/tomshibu13" target="_blank">GitHub</a> /
+                                <a href="https://www.instagram.com/tom_shibu1829/" target="_blank">Instagram</a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- <div class="editorial-qr-box">
+                        <img src="qr.png" alt="Scan QR Code" class="qr-img">
+                        <div class="qr-lbl">SCAN // CONNECT_MOBILE</div>
+                    </div> -->
+                </div>
+
+                <div class="contact-editorial-right">
+                    <form class="editorial-contact-form" id="contactForm">
+                        <div class="editorial-form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">YOUR NAME</label>
+                            <span class="input-glow-line"></span>
+                        </div>
+
+                        <div class="editorial-form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">YOUR EMAIL ADDRESS</label>
+                            <span class="input-glow-line"></span>
+                        </div>
+
+                        <div class="editorial-form-group">
+                            <input type="text" id="subject" name="subject" required placeholder=" ">
+                            <label for="subject">SUBJECT / TOPIC</label>
+                            <span class="input-glow-line"></span>
+                        </div>
+
+                        <div class="editorial-form-group">
+                            <textarea id="message" name="message" required placeholder=" " rows="5"></textarea>
+                            <label for="message">YOUR MESSAGE</label>
+                            <span class="input-glow-line"></span>
+                        </div>
+
+                        <button type="submit" class="btn-editorial-submit" id="formSubmitBtn">
+                            <span>SEND TRANSMISSION</span>
+                            <span class="btn-submit-icon">→</span>
+                        </button>
+
+                        <div class="form-status" id="formStatus"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="script.js"></script>
-        
-    </script>
 </body>
+
 </html>
