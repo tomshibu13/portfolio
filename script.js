@@ -5,6 +5,8 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
+    let typingTimer = null;
+
     // ==========================================
     // 1. Advanced Cursor Spotlight Tracker
     // ==========================================
@@ -159,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ==========================================
     const deckTabs = document.querySelectorAll('.deck-tab');
     const deckContents = document.querySelectorAll('.deck-content');
-    let typingTimer = null;
+
 
     function runActiveTabAnimation() {
         // Clear any running typewriter loops
