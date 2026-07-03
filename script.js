@@ -39,7 +39,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function handleRouting() {
         const hash = window.location.hash || '#home';
-        let targetSection = document.querySelector(hash);
+        let targetSection = null;
+
+        try {
+            // querySelector throws an exception if the selector is invalid
+            targetSection = document.querySelector(hash);
+        } catch (e) {
+            console.error("Invalid routing hash:", hash, e);
+        }
 
         // Fallback to home if section doesn't exist
         if (!targetSection) {
@@ -73,6 +80,15 @@ document.addEventListener("DOMContentLoaded", function () {
             runActiveTabAnimation();
         }
     }
+
+    // Close mobile menu on clicking any nav link (even if already active hash)
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            if (mobileMenu && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    });
 
     // Bind hash change listener
     window.addEventListener('hashchange', handleRouting);
